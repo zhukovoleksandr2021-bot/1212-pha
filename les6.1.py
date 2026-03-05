@@ -1,5 +1,8 @@
-file_path = r"C:SHARA//1212//Саша Жуков//1.txt"
+path = input("path: ")
 
-with open(file_path, 'r', encoding='utf-8') as file:
-    content = file.read()
-    print(content)
+try:
+    with open(path, 'r', encoding='utf-8') as file:
+        content = file.read()
+        print(content)
+except FileNotFoundError as fnfe:
+    print(f"File {path} not")
